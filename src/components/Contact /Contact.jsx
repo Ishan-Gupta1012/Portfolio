@@ -4,6 +4,8 @@ import con from "../../assets/contact.png"
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/all";
+import linked from "../../assets/linked.png"
+import git from "../../assets/git.png"
 gsap.registerPlugin(ScrollTrigger)
 
 function Contact() {
@@ -44,8 +46,19 @@ function Contact() {
     <div id="contact">
         <div className="leftcontact">
             <img src={con} alt="" />
+            <div className="social-links">
+          <a href="https://www.linkedin.com/in/ishan-gupta-08686631a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BuVkHFmqNTnWvp4ff0TmKHA%3D%3D" target="_blank" rel="noopener noreferrer">
+            <img src={linked} alt="" />
+          </a>
+
+          <a href="https://github.com/Ishan-Gupta1012" target="_blank"></a>
+          <img src={git} alt="" id = "git"/>
+
+
+        </div>
         </div>
         <div className="rightcontact">
+        
             <form action="https://formspree.io/f/xyzdbaaa" method='POST'>
                 <input type="text" name= "Username" placeholder='Name' />
                 <input type="email" name= "Email" placeholder='xyz@gmail.com'/>
@@ -58,4 +71,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default Contact ;
